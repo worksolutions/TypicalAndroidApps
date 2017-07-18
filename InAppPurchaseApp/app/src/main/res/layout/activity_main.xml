@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ru.worksolutions.inapppurchaseapp.MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_buy_premium"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="КУПИТЬ ПРЕМИУМ" />
+
+
+        <TextView
+            android:id="@+id/tv_has_premium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="У вас нет премиум аккаунта" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_buy_coins"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="КУПИТЬ 10 монет" />
+
+
+        <TextView
+            android:id="@+id/tv_coins_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Количество монет: 0" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_subscribe"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="Подписаться" />
+
+
+        <TextView
+            android:id="@+id/tv_has_subscribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="У вас нет подписки" />
+
+    </LinearLayout>
+</LinearLayout>
