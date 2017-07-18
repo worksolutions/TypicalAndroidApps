@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan" />
+
+    <Button
+        android:id="@+id/btn_discoverable"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/btn_scan"
+        android:layout_height="wrap_content"
+        android:text="discoverable" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/btn_scan"
+        android:layout_height="25dp"
+        android:textSize="16dp"
+        android:textColor="@android:color/black"/>
+
+    <ListView
+        android:id="@+id/in"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:layout_below="@id/tv_status"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll" />
+
+    <Button
+        android:id="@+id/button_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="send" />
+
+    <EditText
+        android:id="@+id/edit_text_out"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_toLeftOf="@id/button_send"
+        android:layout_weight="1" />
+
+
+</RelativeLayout>
