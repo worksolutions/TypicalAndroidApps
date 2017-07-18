@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <title>Example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width,height=device-height, user-scalable=no"/>
+    <script type="text/javascript">
+        var myMap;
+        ymaps.ready(init);
+
+        function buildRoute(from, to) {
+                ymaps.route([
+                from,
+                to
+            ]).then(function (route) {
+                myMap.geoObjects.removeAll()
+                route.options.set("mapStateAutoApply", true);
+                myMap.geoObjects.add(route);
+                app.showDetails(route.getLength(),route.getTime())
+                var points = route.getWayPoints(),
+                    lastPoint = points.getLength() - 1;
+                points.options.set('preset', 'islands#redStretchyIcon');
+                points.get(0).properties.set('iconContent', 'Точка отправления');
+                points.get(lastPoint).properties.set('iconContent', 'Точка прибытия');
+            }, function (error) {
+                alert('Возникла ошибка: ' + error.message);
+            });
+        }
+
+        function init() {
+            myMap = new ymaps.Map("map", {
+                center: [47.222466, 39.718629],
+                zoom: 13
+            }, {
+                searchControlProvider: 'yandex#search'
+            });
+
+        }
+
+    </script>
+    <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+<div id="map"></div>
+</body>
+</html>
