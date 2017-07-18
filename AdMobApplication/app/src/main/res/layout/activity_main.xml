@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.worksolutions.admobapplication.MainActivity">
+
+    <Button
+        android:id="@+id/btn_show_ad"
+        android:text="Show Advertising screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/btn_show_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_show_ad"
+        android:layout_centerHorizontal="true"
+        android:text="show video"/>
+
+    <com.google.android.gms.ads.NativeExpressAdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nativeAdView"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        ads:adUnitId="ca-app-pub-8069798296755807/1909966371"
+        ads:adSize="320x150">
+    </com.google.android.gms.ads.NativeExpressAdView>
+
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-8069798296755807/8713379574">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>
