@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.worksolutions.mapsapp.MainActivity">
+
+    <Spinner
+        android:id="@+id/spinner_from"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <Spinner
+        android:id="@+id/spinner_to"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/spinner_from" />
+
+    <TextView
+        android:id="@+id/tv_route_information"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_below="@id/spinner_to" />
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_below="@id/tv_route_information"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>
